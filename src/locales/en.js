@@ -115,6 +115,7 @@ export default {
         second:   ['second', 'seconds'],
         seconds:  ['second', 'seconds'],
         busy:     'Busy',
+        relay:    'Off',
         free:     'Free'
       }
     },
@@ -144,6 +145,7 @@ export default {
         second:   ['second', 'seconds'],
         seconds:  ['second', 'seconds'],
         busy:     'Busy',
+        relay:    'Off',
         free:     'Free'
       }
     },
@@ -169,6 +171,7 @@ export default {
         seconds:  ['second', 'seconds'],
         busy:     'Busy',
         free:     'Free',
+        relay:    'Off',
         location: 'Add location',
         description: 'Add description',
         calendar: 'Calendar',
@@ -176,6 +179,10 @@ export default {
       busyOptions: [
         {text: 'Busy'},
         {text: 'Free'}
+      ],
+      relayStates: [
+        { text: 'Off' },
+        { text: 'On' },
       ]
     },
     dsSchedule: {
@@ -208,6 +215,10 @@ export default {
       busyOptions: [
         {text: 'Busy'},
         {text: 'Free'}
+      ],
+      relayStates: [
+        { text: 'Off' },
+        { text: 'On' },
       ]
     },
     dsScheduleActions: {

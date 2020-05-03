@@ -48,6 +48,7 @@ export default {
       location:       true,
       calendar:       true,
       busy:           true,
+      relay:           true,
       icon:           true,
       guests:         false
     },
@@ -251,6 +252,7 @@ export default {
         forecolor: '#ffffff',
         calendar: '',
         busy: true,
+        relay: true,
         icon: ''
       };
     },

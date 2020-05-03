@@ -76,18 +76,18 @@
          </v-list-tile-content>
        </v-list-tile>
 
-       <v-list-tile v-if="prompts.location && $dayspan.supports.location">
+       <v-list-tile v-if="prompts.relay && $dayspan.supports.relay">
          <v-list-tile-avatar>
-           <v-icon>location_on</v-icon>
+           <v-icon>flash_on</v-icon>
          </v-list-tile-avatar>
          <v-list-tile-content>
-           <slot name="eventCreatePopoverLocation" v-bind="slotData">
+           <slot name="eventCreatePopoverRelay" v-bind="slotData">
 
-             <v-text-field
-               single-line hide-details solo flat full-width
-               :label="labels.location"
-               v-model="details.location"
-             ></v-text-field>
+             <v-select
+              single-line hide-details solo flat full-width
+              :items="relayStates"
+              v-model="details.relay"
+            ></v-select>
 
            </slot>
          </v-list-tile-content>
@@ -276,6 +276,13 @@ export default {
       type: Array,
       default() {
         return this.$dsDefaults().busyOptions;
+      }
+    },
+    relayStates:
+    {
+      type: Array,
+      default() {
+        return this.$dsDefaults().relayStates;
       }
     }
   },

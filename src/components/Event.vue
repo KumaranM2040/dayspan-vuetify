@@ -200,6 +200,17 @@
                   ></v-select>
                 </slot>
 
+                <!-- Relay States -->
+                <slot name="eventDetailsRelay" v-bind="slotData">
+                  <v-select v-if="$dayspan.supports.relay"
+                    single-line hide-details solo flat
+                    prepend-icon="flash_on"
+                    :items="relayStates"
+                    :disabled="isReadOnly"
+                    v-model="details.relay"
+                  ></v-select>
+                </slot>
+
                 <slot name="eventDetailsExtra" v-bind="slotData"></slot>
 
               </v-card-text>
@@ -414,7 +425,15 @@ export default {
       default() {
         return this.$dsDefaults().busyOptions;
       }
+    },
+    relayStates:
+    {
+      type: Array,
+      default() {
+        return this.$dsDefaults().relayStates;
+      }
     }
+
   },
 
   data: vm => ({

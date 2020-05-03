@@ -149,12 +149,13 @@ export default {
 
   dsCalendarEventCreatePopover: {
     prompts: {
-      description:  true,
+      description:  false,
       color:        true,
-      location:     true,
+      location:     false,
       calendar:     true,
-      busy:         true,
+      busy:         false,
       icon:         true,
+      relay:         true,
       guests:       false
     },
     formats: {
@@ -182,12 +183,17 @@ export default {
       second:   [LOCALE_ENTRY, LOCALE_ENTRY],
       seconds:  [LOCALE_ENTRY, LOCALE_ENTRY],
       busy:     LOCALE_ENTRY,
+      relay:    LOCALE_ENTRY,
       free:     LOCALE_ENTRY,
       location: LOCALE_ENTRY,
       description: LOCALE_ENTRY,
       calendar: LOCALE_ENTRY,
     },
     busyOptions: [
+      {value: true, text: LOCALE_ENTRY},
+      {value: false, text: LOCALE_ENTRY}
+    ],
+    relayStates: [
       {value: true, text: LOCALE_ENTRY},
       {value: false, text: LOCALE_ENTRY}
     ]
@@ -273,6 +279,10 @@ export default {
       }
     },
     busyOptions: [
+      {value: true, text: LOCALE_ENTRY},
+      {value: false, text: LOCALE_ENTRY}
+    ],
+    relayStates: [
       {value: true, text: LOCALE_ENTRY},
       {value: false, text: LOCALE_ENTRY}
     ]
