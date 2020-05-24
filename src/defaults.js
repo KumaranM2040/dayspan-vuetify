@@ -154,8 +154,9 @@ export default {
       location:     false,
       calendar:     true,
       busy:         false,
-      icon:         true,
-      relay:         true,
+      icon:         false,
+      relayState:   true,
+      relayName:    true,
       guests:       false
     },
     formats: {
@@ -183,7 +184,7 @@ export default {
       second:   [LOCALE_ENTRY, LOCALE_ENTRY],
       seconds:  [LOCALE_ENTRY, LOCALE_ENTRY],
       busy:     LOCALE_ENTRY,
-      relay:    LOCALE_ENTRY,
+      relayState:LOCALE_ENTRY,
       free:     LOCALE_ENTRY,
       location: LOCALE_ENTRY,
       description: LOCALE_ENTRY,

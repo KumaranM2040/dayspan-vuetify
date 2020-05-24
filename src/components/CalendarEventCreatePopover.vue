@@ -76,7 +76,30 @@
          </v-list-tile-content>
        </v-list-tile>
 
-       <v-list-tile v-if="prompts.relay && $dayspan.supports.relay">
+       <v-list-tile v-if="prompts.relayName && $dayspan.supports.relayName">
+         <v-list-tile-avatar>
+           <v-icon>assignment</v-icon>
+         </v-list-tile-avatar>
+         <v-list-tile-content>
+           <slot name="eventCreatePopoverColor" v-bind="slotData">
+
+            <v-select
+              single-line hide-details solo flat full-width
+              :items="$dayspan.relays"
+              :color="details.color"
+              v-model="details.relays">
+              <template slot="item" slot-scope="{ item }">
+                <v-list-tile-content>
+                  <div class="ds-color-option" :style="{backgroundColor: item.value}" v-text="item.text"></div>
+                </v-list-tile-content>
+              </template>
+            </v-select>
+
+           </slot>
+         </v-list-tile-content>
+       </v-list-tile>
+
+       <v-list-tile v-if="prompts.relayState && $dayspan.supports.relayState">
          <v-list-tile-avatar>
            <v-icon>flash_on</v-icon>
          </v-list-tile-avatar>
@@ -86,7 +109,7 @@
              <v-select
               single-line hide-details solo flat full-width
               :items="relayStates"
-              v-model="details.relay"
+              v-model="details.relayState"
             ></v-select>
 
            </slot>

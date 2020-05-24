@@ -2,6 +2,7 @@
 import { Day, Constants, Parse, Schedule, DaySpan, CalendarEvent, Pattern, Patterns, PatternMap, Functions as fn } from 'dayspan';
 import { default as Defaults } from './defaults';
 import { default as Colors } from './colors';
+import { default as Relays } from './relays';
 import { default as Icons } from './icons';
 import { default as Locales, defaultLocale } from './locales'
 import { dsMerge, dsMergeLocale } from './functions';
@@ -48,7 +49,8 @@ export default {
       location:       true,
       calendar:       true,
       busy:           true,
-      relay:           true,
+      relayState:     true,
+      relayName:      true,
       icon:           true,
       guests:         false
     },
@@ -109,6 +111,8 @@ export default {
     },
 
     colors: Colors,
+
+    relays: Relays,
 
     icons: Icons,
 
@@ -252,7 +256,8 @@ export default {
         forecolor: '#ffffff',
         calendar: '',
         busy: true,
-        relay: true,
+        relayState: true,
+        relayName: true,
         icon: ''
       };
     },

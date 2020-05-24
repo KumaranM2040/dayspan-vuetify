@@ -202,13 +202,30 @@
 
                 <!-- Relay States -->
                 <slot name="eventDetailsRelay" v-bind="slotData">
-                  <v-select v-if="$dayspan.supports.relay"
+                  <v-select v-if="$dayspan.supports.relayState"
                     single-line hide-details solo flat
                     prepend-icon="flash_on"
                     :items="relayStates"
                     :disabled="isReadOnly"
-                    v-model="details.relay"
+                    v-model="details.relayState"
                   ></v-select>
+                </slot>
+
+                <!-- Relay Names -->
+                <slot name="eventDetailsRelayName" v-bind="slotData">
+                  <v-select v-if="$dayspan.supports.color"
+                    single-line hide-details solo flat
+                    prepend-icon="invert_colors"
+                    :items="$dayspan.relays"
+                    :color="details.color"
+                    :disabled="isReadOnly"
+                    v-model="details.relays">
+                    <template slot="item" slot-scope="{ item }">
+                      <v-list-tile-content>
+                        <div class="ds-color-option" :style="{backgroundColor: item.value}" v-text="item.text"></div>
+                      </v-list-tile-content>
+                    </template>
+                  </v-select>
                 </slot>
 
                 <slot name="eventDetailsExtra" v-bind="slotData"></slot>

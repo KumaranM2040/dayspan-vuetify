@@ -44,6 +44,12 @@ export default {
     { text: 'Gray' },
     { text: 'Black' }
   ],
+  relays: [
+    { text: 'Relay 1' },
+    { text: 'Relay 2' },
+    { text: 'Relay 3' },
+    { text: 'Relay 4' }
+  ],
   icons: [
     { text: 'Alarm' },
     { text: 'Star' },
@@ -115,7 +121,8 @@ export default {
         second:   ['second', 'seconds'],
         seconds:  ['second', 'seconds'],
         busy:     'Busy',
-        relay:    'Off',
+        relayState:'Off',
+        relayName:'Relay1',
         free:     'Free'
       }
     },
@@ -145,7 +152,8 @@ export default {
         second:   ['second', 'seconds'],
         seconds:  ['second', 'seconds'],
         busy:     'Busy',
-        relay:    'Off',
+        relayState:'Off',
+        relayName:'Relay1',
         free:     'Free'
       }
     },
@@ -171,7 +179,8 @@ export default {
         seconds:  ['second', 'seconds'],
         busy:     'Busy',
         free:     'Free',
-        relay:    'Off',
+        relayState:'Off',
+        relayName:'Relay1',
         location: 'Add location',
         description: 'Add description',
         calendar: 'Calendar',
