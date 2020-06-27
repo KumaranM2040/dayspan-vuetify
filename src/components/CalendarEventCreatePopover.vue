@@ -90,7 +90,7 @@
               v-model="details.relays">
               <template slot="item" slot-scope="{ item }">
                 <v-list-tile-content>
-                  <div class="ds-color-option" :style="{backgroundColor: item.value}" v-text="item.text"></div>
+                  <div class="ds-color-option" :style="{backgroundColor: item.color}" v-text="item.text"></div>
                 </v-list-tile-content>
               </template>
             </v-select>

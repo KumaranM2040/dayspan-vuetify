@@ -195,8 +195,8 @@ export default {
       {value: false, text: LOCALE_ENTRY}
     ],
     relayStates: [
-      {value: true, text: LOCALE_ENTRY},
-      {value: false, text: LOCALE_ENTRY}
+      {value: false, text: LOCALE_ENTRY},
+      {value: true, text: LOCALE_ENTRY}
     ]
   },
 

@@ -122,7 +122,7 @@ export default {
         seconds:  ['second', 'seconds'],
         busy:     'Busy',
         relayState:'Off',
-        relayName:'Relay1',
+        relayName:'Relay Name',
         free:     'Free'
       }
     },
@@ -153,7 +153,7 @@ export default {
         seconds:  ['second', 'seconds'],
         busy:     'Busy',
         relayState:'Off',
-        relayName:'Relay1',
+        relayName:'Relay Name',
         free:     'Free'
       }
     },
@@ -180,7 +180,7 @@ export default {
         busy:     'Busy',
         free:     'Free',
         relayState:'Off',
-        relayName:'Relay1',
+        relayName:'Relay Name',
         location: 'Add location',
         description: 'Add description',
         calendar: 'Calendar',

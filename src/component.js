@@ -256,12 +256,10 @@ export default {
         forecolor: '#ffffff',
         calendar: '',
         busy: true,
-        relayState: true,
-        relayName: true,
+        relayState: false,
         icon: ''
       };
     },
-
     getDefaultEventColor()
     {
       return this.colors[Math.floor(this.colors.length * Math.random())].value;

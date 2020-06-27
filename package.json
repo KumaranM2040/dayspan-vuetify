@@ -22,6 +22,7 @@
     "styleguide:build": "vue-styleguidist build"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "dayspan": "^0.12.2",
     "material-design-icons-iconfont": "^3.0.3",
     "vue": "^2.3.3",

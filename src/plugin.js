@@ -2,6 +2,7 @@
 import { dsMergeOptions, dsMergeValidate, dsValidate, dsDefaults, dsBind } from './functions';
 import { default as Component } from './component';
 import * as ComponentMap from './components'
+import axios from 'axios';
 
 export default {
 
@@ -20,7 +21,7 @@ export default {
 
     // allow directives to access $dayspan
     Vue.$dayspan = $dayspan;
-
+    Vue.prototype.$http = axios
     // allow components to access $dayspan
     Vue.prototype.$dayspan = $dayspan;
 
