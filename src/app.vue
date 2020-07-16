@@ -144,17 +144,16 @@ export default {
     {
       let state = this.calendar.toInput(true);
       let json = JSON.stringify(state);
-      debugger
-
+      //debugger
+      const params = new URLSearchParams();
+      params.append('saveState', json);
        try {
-        await this.$http.post('/relays',json);
+        await this.$http.post('/relays',params);
       }
       catch(ex){
         // eslint-disable-next-line
         console.log(ex);
       }
-
-      localStorage.setItem(this.storeKey, json);
     },
 
     async loadState()
@@ -172,9 +171,7 @@ export default {
             // eslint-disable-next-line
             console.log(ex);
           }
-        let savedState = JSON.parse(result);
-        //let savedState = JSON.parse(localStorage.getItem(this.storeKey));
-
+        let savedState = JSON.parse(result.data.saveState);
         if (savedState)
         {
           state = savedState;
